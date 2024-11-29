@@ -1,0 +1,21 @@
+[project]
+name = "coinmarket-service"
+version = "0.1.0"
+description = "Coinmarket MCP Server"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+ "mcp>=1.0.0",
+ "python-dotenv>=1.0.1",
+ "requests>=2.32.3",
+]
+[[project.authors]]
+name = "anjor"
+email = "anjor@umd.edu"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+coinmarket-service = "coinmarket_service:main"
