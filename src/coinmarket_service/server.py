@@ -18,13 +18,13 @@ if not API_KEY:
 async def get_currency_listings():
     url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
     parameters = {
-    'start':'1',
-    'limit':'2',
-    'convert':'USD'
+      'start':'1',
+      'limit':'2',
+      'convert':'USD'
     }
     headers = {
-    'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY': API_KEY,
+      'Accepts': 'application/json',
+      'X-CMC_PRO_API_KEY': API_KEY,
     }
 
     response = requests.get(url, headers=headers, params=parameters)
@@ -50,10 +50,6 @@ async def handle_list_resources() -> list[types.Resource]:
 
 @server.read_resource()
 async def handle_read_resource(uri: AnyUrl) -> str:
-    """
-    Read a specific note's content by its URI.
-    The note name is extracted from the URI host component.
-    """
     if uri.scheme != "coinmarket":
         raise ValueError(f"Unsupported scheme: {uri.scheme}")
     if uri.path != "/listings":
