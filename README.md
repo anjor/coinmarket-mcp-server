@@ -1,4 +1,4 @@
-# coinmarket_service MCP server
+# Coinmarket MCP server
 
 Coinmarket MCP Server
 
@@ -6,27 +6,20 @@ Coinmarket MCP Server
 
 ### Resources
 
-The server implements a simple note storage system with:
-- Custom note:// URI scheme for accessing individual notes
+The server implements a few of the [Coinmarket API](https://coinmarketcap.com/api/documentation/v1/#section/Introduction) endpoints
+- Custom coinmarket:// URI scheme for accessing individual notes
 - Each note resource has a name, description and text/plain mimetype
-
-### Prompts
-
-The server provides a single prompt:
-- summarize-notes: Creates summaries of all stored notes
-  - Optional "style" argument to control detail level (brief/detailed)
-  - Generates prompt combining all current notes with style preference
 
 ### Tools
 
-The server implements one tool:
-- add-note: Adds a new note to the server
-  - Takes "name" and "content" as required string arguments
-  - Updates server state and notifies clients of resource changes
+The server implements two tools:
+- get-currency-listings: Get the latest currency listings
+- get-quotes: Get quotes for tokens
+  - Takes "slug" (example: bitcoin) or "symbol" (example: BTC) as optional string argument
 
 ## Configuration
 
-[TODO: Add configuration details specific to your implementation]
+Requires coinmarket API key.
 
 ## Quickstart
 
@@ -48,52 +41,15 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
         "/Users/anjor/repos/anjor/coinmarket_service",
         "run",
         "coinmarket_service"
-      ]
+      ],
+      "env": {
+        "COINMARKET_API_KEY": "<insert api key>"
+      }
     }
   }
   ```
 </details>
 
-<details>
-  <summary>Published Servers Configuration</summary>
-  ```
-  "mcpServers": {
-    "coinmarket_service": {
-      "command": "uvx",
-      "args": [
-        "coinmarket_service"
-      ]
-    }
-  }
-  ```
-</details>
-
-## Development
-
-### Building and Publishing
-
-To prepare the package for distribution:
-
-1. Sync dependencies and update lockfile:
-```bash
-uv sync
-```
-
-2. Build package distributions:
-```bash
-uv build
-```
-
-This will create source and wheel distributions in the `dist/` directory.
-
-3. Publish to PyPI:
-```bash
-uv publish
-```
-
-Note: You'll need to set PyPI credentials via environment variables or command flags:
-- Token: `--token` or `UV_PUBLISH_TOKEN`
-- Or username/password: `--username`/`UV_PUBLISH_USERNAME` and `--password`/`UV_PUBLISH_PASSWORD`
 
 ### Debugging
 
