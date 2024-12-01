@@ -37,7 +37,6 @@ async def get_currency_listings() -> dict[str, Any]:
 async def get_quotes(slug: str | None, symbol: str | None) -> dict[str, Any]:
     url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
     parameters = {
-      'id':'1',
       'convert':'USD'
     }
     if slug:
