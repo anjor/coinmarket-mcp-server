@@ -13,8 +13,8 @@ The server implements a few of the [Coinmarket API](https://coinmarketcap.com/ap
 ### Tools
 
 The server implements two tools:
-- get-currency-listings: Get the latest currency listings
-- get-quotes: Get quotes for tokens
+- `get-currency-listings`: Get the latest currency listings
+- `get-quotes`: Get quotes for tokens
   - Takes "slug" (example: bitcoin) or "symbol" (example: BTC) as optional string argument
 
 ## Configuration
@@ -51,17 +51,3 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 </details>
 
 
-### Debugging
-
-Since MCP servers run over stdio, debugging can be challenging. For the best debugging
-experience, we strongly recommend using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector).
-
-
-You can launch the MCP Inspector via [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) with this command:
-
-```bash
-npx @modelcontextprotocol/inspector uv --directory /Users/anjor/repos/anjor/coinmarket_service run coinmarket-service
-```
-
-
-Upon launching, the Inspector will display a URL that you can access in your browser to begin debugging.
