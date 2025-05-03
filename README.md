@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/anjor-coinmarket-mcp-server-badge.png)](https://mseep.ai/app/anjor-coinmarket-mcp-server)
+
 # Coinmarket MCP server
 
 Coinmarket MCP Server
