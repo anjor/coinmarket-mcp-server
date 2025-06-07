@@ -2,6 +2,8 @@
 
 # Coinmarket MCP server
 
+[![smithery badge](https://smithery.ai/badge/coinmarket-service)](https://smithery.ai/server/coinmarket-service)
+
 Coinmarket MCP Server
 
 <a href="https://glama.ai/mcp/servers/6ag7ms62ns"><img width="380" height="200" src="https://glama.ai/mcp/servers/6ag7ms62ns/badge" alt="Coinmarket MCP server" /></a>
@@ -29,6 +31,14 @@ Requires coinmarket API key.
 
 ### Install
 
+#### Installing via Smithery
+
+To install Coinmarket Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/coinmarket-service):
+
+```bash
+npx -y @smithery/cli install coinmarket-service --client claude
+```
+
 #### Claude Desktop
 
 On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
@@ -53,5 +63,4 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
   }
   ```
 </details>
-
 
