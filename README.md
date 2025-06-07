@@ -2,6 +2,8 @@
 
 Coinmarket MCP Server
 
+<a href="https://glama.ai/mcp/servers/6ag7ms62ns"><img width="380" height="200" src="https://glama.ai/mcp/servers/6ag7ms62ns/badge" alt="Coinmarket MCP server" /></a>
+
 ## Components
 
 ### Resources
