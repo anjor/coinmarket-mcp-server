@@ -68,6 +68,34 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
   ```
 </details>
 
+#### Docker
+
+You can also run the server using Docker:
+
+```bash
+# Build the image
+docker build -t coinmarket-service .
+
+# Run the container
+docker run -e COINMARKET_API_KEY=your_api_key_here coinmarket-service
+```
+
+For Claude Desktop configuration with Docker:
+```json
+"mcpServers": {
+  "coinmarket_service": {
+    "command": "docker",
+    "args": [
+      "run",
+      "--rm",
+      "-e",
+      "COINMARKET_API_KEY=<insert api key>",
+      "coinmarket-service"
+    ]
+  }
+}
+```
+
 ## Troubleshooting
 
 ### "spawn uv ENOENT" Error
