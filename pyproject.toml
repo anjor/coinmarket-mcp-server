@@ -19,4 +19,4 @@ requires = [ "hatchling",]
 build-backend = "hatchling.build"
 
 [project.scripts]
-coinmarket-service = "coinmarket_service:main"
+coinmarket_service = "coinmarket_service:main"
