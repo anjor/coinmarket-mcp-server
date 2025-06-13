@@ -27,7 +27,21 @@ Requires coinmarket API key.
 
 ## Quickstart
 
+### Prerequisites
+
+- Python 3.12 or higher
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) package manager
+
 ### Install
+
+Install uv if you haven't already:
+```bash
+# macOS and Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
 
 #### Claude Desktop
 
@@ -42,7 +56,7 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
       "command": "uv",
       "args": [
         "--directory",
-        "/Users/anjor/repos/anjor/coinmarket_service",
+        "/path/to/coinmarket_service",
         "run",
         "coinmarket_service"
       ],
@@ -53,5 +67,22 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
   }
   ```
 </details>
+
+## Troubleshooting
+
+### "spawn uv ENOENT" Error
+
+If you see this error, it means `uv` is not installed or not in your PATH:
+
+1. **Install uv** following the instructions above
+2. **Restart your terminal/Claude Desktop** after installation
+3. **Verify installation**: Run `uv --version` in terminal
+4. **Update PATH**: Make sure uv is in your system PATH
+
+### Configuration Issues
+
+- Replace `/path/to/coinmarket_service` with the actual path to your cloned repository
+- Ensure your `COINMARKET_API_KEY` is valid
+- The path should point to the root directory containing `pyproject.toml`
 
 
