@@ -1,5 +1,7 @@
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/anjor-coinmarket-mcp-server-badge.png)](https://mseep.ai/app/anjor-coinmarket-mcp-server)
 
+[![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/anjor/coinmarket-mcp-server)](https://archestra.ai/mcp-catalog/anjor__coinmarket-mcp-server)
+
 # Coinmarket MCP server
 
 Coinmarket MCP Server
