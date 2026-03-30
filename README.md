@@ -114,3 +114,8 @@ If you see this error, it means `uv` is not installed or not in your PATH:
 - The path should point to the root directory containing `pyproject.toml`
 
 
+
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/anjor-coinmarket-mcp-server).
+
